@@ -1,0 +1,20 @@
+{
+  "name": "2send",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^2.30.3"
+  },
+  "devDependencies": {
+    "prisma": "^2.21.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  }
+}

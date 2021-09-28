@@ -1,0 +1,22 @@
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model User {
+    id       Int     @id @default(autoincrement())
+    title    String  @db.VarChar(255)
+    location String  @db.VarChar(255)
+    Event    Event[]
+}
+
+model Event {
+    id        Int      @id @default(autoincrement())
+    createdAt DateTime @default(now())
+    user      User     @relation(fields: [userId], references: [id])
+    userId    Int
+}
